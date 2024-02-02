@@ -117,12 +117,13 @@ section:not(:first-child) {
     padding: 24px 0 24px;
 }
 
-.header_menu_item.catch {
+.link.catch {
     position: relative;
     color: #404bbf;
+    padding-bottom: 27px;
 }
 
-.header_menu_item.catch::after {
+.link.catch::after {
     content: '';
     width: 100%;
     background-color: #404bbf;
@@ -131,6 +132,7 @@ section:not(:first-child) {
     position: absolute;
     bottom: -1px;
     left: 0px;
+    display: block;
 }
 
 .link, .contact_link {
