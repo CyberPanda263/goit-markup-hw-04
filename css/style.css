@@ -115,14 +115,14 @@ section:not(:first-child) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0 24px;
+}
+
+.header_menu_item.catch {
     position: relative;
+    color: #404bbf;
 }
 
-.header_menu_item:nth-child(1) a {
-    color: #404BBF;
-}
-
-.header_menu_item:nth-child(1)::after {
+.header_menu_item.catch::after {
     content: '';
     width: 100%;
     background-color: #404bbf;
@@ -301,7 +301,8 @@ section:not(:first-child) {
 }
 
 .team_social_link:hover, .team_social_link:focus {
-    background-color: #31d0aa;
+    /*background-color: #31d0aa;*/
+    background-color: #404bbf;
 }
 
 .team_social {
@@ -434,7 +435,7 @@ section:not(:first-child) {
 }
 
 .footer_social {
-    fill: #FFFFFF;
+    fill: #f4f4fd;
 }
 
 .footer_social_title {
