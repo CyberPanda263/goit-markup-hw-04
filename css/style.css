@@ -114,6 +114,21 @@ section:not(:first-child) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0 24px;
+    position: relative;
+}
+
+.header_menu_item:nth-child(1) a {
+    color: #404BBF;
+}
+
+.header_menu_item:nth-child(1)::after {
+    content: " ";
+    background-color: #404BBF;
+    border-radius: 2px;
+    padding: 4px 48px 0 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 
 .link {
@@ -144,7 +159,10 @@ section:not(:first-child) {
 /*preview section*/
 
 .preview {
-    background-color: #2E2F42;
+    background-image: linear-gradient(to bottom, #2e2f42c1, #2e2f429f), url("../images/preview.jpg");
+    background-size: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #FFF;
     padding: 0;
     padding: 188px 0 188px;
@@ -205,7 +223,24 @@ section:not(:first-child) {
     width: calc((100% - 72px) / 4);
 }
 
-.item_title {
+.icon_conteiner {
+    background-color: #F4F4FD;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin: 0;
+    max-height: 112px;
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+}
+
+.advantages_icon {
+    width: 64px;
+    display: block;
+    height: 64px;
+}
+
+.item_title, .icon_conteiner {
     margin-bottom: 8px;
 }
 
@@ -229,19 +264,41 @@ section:not(:first-child) {
     background-color: #FFFFFF;
     text-align: center;
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team_content {
     padding: 32px 0 32px
 }
 
-.team_item_title  {
+.team_item_title, .team_item_content  {
     text-align: center;
     margin-bottom: 8px;
 }
 
-.team_item_content {
-    text-align: center;
+.team_social_conteiner {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.team_social_link {
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
+
+.team_social_link:hover, .team_social_link:focus {
+    background-color: #31d0aa;
+}
+
+.team_social {
+    width: 16px;
+    height: 16px;
+    fill: #FFFFFF;
 }
 
 /*portfolio section*/
@@ -256,6 +313,40 @@ section:not(:first-child) {
     column-gap: 24px;
     row-gap: 48px;
 }
+
+.portfolio_item {
+    transition: box-shadow;
+}
+
+.portfolio_item:hover, .portfolio_item:focus {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio_img_anim {
+    position: relative;
+    overflow: hidden;
+}
+
+.porfolio_anim {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: #4d5ae5;
+    color: #F4F4FD;
+    text-align: center;
+    padding: 45px 30px 0;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio_img_anim:hover .porfolio_anim, .portfolio_img_anim:focus .porfolio_anim {
+    transform: translateY(0%);
+}
+
+.portfolio_anim_content { 
+    display: block;
+}
+
 .portfolio_list_title {
     margin-bottom: 8px;
 }
@@ -280,6 +371,10 @@ section:not(:first-child) {
     padding: 100px 0 100px
 }
 
+.foooter_conteiner {
+    display: flex;
+}
+
 .logo_foter {
     display: inline-block;
     color: #4d5ae5;
@@ -294,4 +389,41 @@ section:not(:first-child) {
 
 .footer_content {
     max-width: 264px;
+}
+
+.footer_disription {
+    margin-right: 120px;
+}
+
+.footer_social_conteiner {
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.footer_social_link {
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+}
+
+.footer_social_link:hover, .footer_social_link:focus {
+    background-color: #31d0aa;
+}
+
+.footer_social {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+}
+
+.footer_social_title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
 }
